@@ -3,7 +3,7 @@
 
 
 
-void puppy::upscale()
+void spreadsheet::upscale()
 {
 	int c;
 	std::cout << " how many would you like to add " << std::endl;
@@ -55,7 +55,7 @@ void puppy::upscale()
 	delete[]temp;
 	temp = nullptr;
 }
-void puppy::vals()
+void spreadsheet::vals()
 {
 
 	for (int x = 0; x < amount; x++)
@@ -73,7 +73,7 @@ void puppy::vals()
 
 
 }
-puppy::puppy() {
+spreadsheet::spreadsheet() {
 
 	std::cout << "the array is defaulted to 10 " << std::endl;// original used user input but i want the user to resize when neccesary
 	amount = 10;
@@ -104,7 +104,7 @@ puppy::puppy() {
 
 
 
-	void puppy::deleted() {
+	void spreadsheet::deleted() {
 
 		delete[] fir;
 		fir = nullptr;
@@ -118,7 +118,7 @@ puppy::puppy() {
 
 
 
-	void puppy::delear() {
+	void spreadsheet::delear() {
 		int con = 1;
 		while (con == 1)
 		{
@@ -237,7 +237,7 @@ puppy::puppy() {
 
 	}
 
-	void puppy::change()
+	void spreadsheet::change()
 	{
 		int a;
 		vals();
@@ -269,7 +269,7 @@ puppy::puppy() {
 
 
 
-	void accessspec(puppy* name, int b)// access the class array within a specfic 
+	void accessspec(spreadsheet* name, int b)// access the class array within a specfic 
 	{
 		std::cout << " there are " << b << "  sheet/classarrays " << std::endl;
 		std::cout << " please enter your array index you would like to access --> " << std::endl;
@@ -301,7 +301,7 @@ puppy::puppy() {
 	}
 
 
-	void chgval(puppy* name, int b)
+	void chgval(spreadsheet* name, int b)
 	{
 		std::cout << " there are " << b << "  sheet/classarrays " << std::endl;
 		int a;
@@ -333,7 +333,7 @@ puppy::puppy() {
 
 
 
-	void chginarr(puppy* name, int b)// access internal array and resizes it 
+	void chginarr(spreadsheet* name, int b)// access internal array and resizes it 
 	{
 
 		std::cout << " there are " << b << "sheet/classarrays " << std::endl;
@@ -386,7 +386,7 @@ puppy::puppy() {
 
 	}
 
-	void chkclass(puppy* name, int b)
+	void chkclass(spreadsheet* name, int b)
 	{
 		for (int c = 0; c < b; c++)
 		{
@@ -407,7 +407,7 @@ puppy::puppy() {
 	}
 
 
-	puppy* resizecal(puppy* name, int& b) // dont forget to return the pointer
+	spreadsheet* resizecal(spreadsheet* name, int& b) // dont forget to return the pointer
 	{
 		int a;
 
@@ -415,8 +415,8 @@ puppy::puppy() {
 		std::cin >> a;
 		if (a > b)
 		{
-			puppy* temp;
-			temp = new puppy[a];
+			spreadsheet* temp;
+			temp = new spreadsheet[a];
 			for (int c = 0; c < b; c++)
 			{
 
@@ -427,7 +427,7 @@ puppy::puppy() {
 			}
 
 			delete name; // this release the memory connected to name 
-			name = new puppy[a];
+			name = new spreadsheet[a];
 			for (int c = 0; c < b; c++)
 			{
 
@@ -462,9 +462,9 @@ puppy::puppy() {
 	void running()
 	{
 		int con = 1;
-		puppy* iroh;
+		spreadsheet* iroh;
 		int count = 1;
-		iroh = new puppy[count];
+		iroh = new spreadsheet[count];
 		while (con == 1)
 		{
 			int b;
